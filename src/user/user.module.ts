@@ -21,6 +21,9 @@ export class UsersService {
     getUser(id: number): User {
         return this.users.find(user => user.id === Number(id));
     }
+    getUserByUsername(username: number): User {
+        return this.users.find(user => user.username === String(username));
+    }
 
     createUser(user: Omit<User, 'id'>): User {
         const newUser: User = { id: this.idCounter++,...user };

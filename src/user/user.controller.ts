@@ -1,10 +1,10 @@
-import { Controller, Get, Post, Put, Delete, Param, Body, Patch } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Param, Body, Patch, UsePipes, ValidationPipe } from '@nestjs/common';
 import { UsersService, User } from './user.service';
 
 
 @Controller('user')
 export class UserController {
-    constructor(private readonly usersService: UsersService) {}
+    constructor(private readonly usersService: UsersService) { }
 
     @Get()
     getUsers(): User[] {
@@ -15,8 +15,14 @@ export class UserController {
     getUser(@Param('id') id: number): User {
         return this.usersService.getUser(Number(id));
     }
+    @Get('username/:username') // For getting user by username
+    getUserByUsername(@Param('username') username: string): User {
+        return this.usersService.getUserByUsername(String(username));
+    }
+
 
     @Post()
+    @UsePipes(new ValidationPipe())
     createUser(@Body() user: Omit<User, 'id'>): User {
         return this.usersService.createUser(user);
     }
