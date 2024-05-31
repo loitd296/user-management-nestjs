@@ -26,6 +26,15 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+### Result:
+
+| Feature | Image |
+|---------|-------|
+| Create User | ![image](https://github.com/loitd296/user-management-nestjs/assets/97017479/79d42295-b078-426c-a7ab-4a1073093053)](#) |
+| Update User | ![image](https://github.com/loitd296/user-management-nestjs/assets/97017479/7b3ea688-9981-4ffd-b55d-ed180c33fb88)](#) |
+| Delete User | ![image](https://github.com/loitd296/user-management-nestjs/assets/97017479/5672da4b-28db-4732-a90c-5fc2ec91e31e)](#) |
+| Search User | ![image](https://github.com/loitd296/user-management-nestjs/assets/97017479/1d9703b6-a26d-49e7-ac27-31e1a094ebe5)](#) |
+
 ## Installation
 
 ```bash
